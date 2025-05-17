@@ -21,3 +21,14 @@ document.querySelector('.next').addEventListener('click', () => {
 setInterval(() => {
     showSlide(currentIndex + 1);
 }, 5000);
+
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+    });
+});
