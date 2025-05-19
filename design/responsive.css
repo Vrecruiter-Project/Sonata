@@ -22,7 +22,7 @@
         font-size: 1.1rem;
     }
 
-    .heading {
+    .head-btn {
         button, span {
             font-size: 1.5rem;
         }
@@ -70,6 +70,9 @@
 }
 
 @media screen and (max-width: 900px) {
+    h1 {
+            font-size: 2rem;
+    }
     .links {
         flex-direction: column;
         width: 100%;        
@@ -129,6 +132,21 @@
     }
     .slide-content {
         height: auto;
+    }
+    .heading {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 0;
+        p{
+            font-size: 1rem;
+        }
+    }
+    .head-btn {
+        button, span{
+            font-size: 0.8rem;
+        }
     }
     .experience {
         flex-direction: column;
@@ -215,11 +233,47 @@
     .staff-intro, .intro {
         width: 100%;
     }
+    .copyright {    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 550px ) {
     section {
         margin-block: 2rem;
+    }
+    .slider-head {
+        width: 100%;
+        flex-direction: column;
+        left: 0;
+    }
+    .social-link {
+        transform: rotate(0deg);
+        flex-direction: row;
+        font-size: 1.4rem;
+        gap: 0;
+    }
+    .fb {
+        color: #fff;
+    }
+    .slide {
+        height: 50dvh;
+    }
+
+    .heading {
+        h1 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+        button, span {
+            font-size: 0.8rem;
+        }
     }
     .about-exp {
         flex-direction: column;
