@@ -58,6 +58,12 @@ section {
     width: 100px;
   }
 }
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .links {
   display: flex;
   align-items: center;
@@ -83,6 +89,14 @@ section {
       background-color: blue;
       color: #fff;
   }
+}
+
+#active-sidebar {
+  display: none;
+}
+.open-sidebar,
+.close-sidebar {
+  display: none;
 }
 
 .container2 {
@@ -338,18 +352,18 @@ section {
 .achiv-detail {
   width: 50%;
 }
-.achiv-activity {
-  margin-block: 1rem;
+.achiv-activity { 
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 .achiv-dbtn {
-  background-color: blue;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  font-size: 1.2rem;
+    background-color: blue;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 .activity {
   width: 100%;
@@ -561,9 +575,8 @@ section {
 .foot-content {
   width: 90%;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   line-height: 1.5;
   gap: 2rem;
 }
@@ -599,10 +612,11 @@ section {
     background-color: blue;
     color: #fff;
 }
-.copyright {
-    
-    display: flex;
-    justify-content: space-between;
+.copyright {    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    line-height: 1.5;
+    gap: 2rem;
 }
 
 .footer-social {
