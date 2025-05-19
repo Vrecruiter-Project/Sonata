@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "basic";
+    src: url(../assest/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "bold";
+    src: url(../assest/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "italic";
+    src: url(../assest/fonts/Roboto-Italic.ttf);
+}

@@ -1,6 +1,8 @@
+@import url(./font.css);
 * {
   margin: 0;
   padding: 0;
+  font-family: "basic";
 }
 
 .container {
@@ -24,6 +26,9 @@ h5 {
 h6{
     font-size: 1.5rem;
 }
+p {
+  font-size: 1.5rem;
+}
 
 section {
   margin-block: 4rem;
@@ -44,6 +49,7 @@ section {
   position: fixed;
   z-index: 2;
   top: 0;
+  box-shadow: 0 2px blue;
 }
 
 .logo-img {
@@ -73,6 +79,10 @@ section {
   border: 2px solid blue;
   border-radius: 1rem;
   padding: 0.5rem 0.7rem;
+  &:hover {
+      background-color: blue;
+      color: #fff;
+  }
 }
 
 .container2 {
@@ -144,7 +154,6 @@ section {
 
 .heading {
   width: 65%;
-  text-align: justify;
   line-height: 1.5;
   text-shadow: 0px 1px 10px black;
   padding-block: 2rem;
@@ -156,7 +165,7 @@ section {
     font-size: 1.5rem;
   }
   p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   span {
     margin-left: 1rem;
@@ -164,13 +173,13 @@ section {
   }
 }
 .social-link {
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   transform: rotate(-90deg);
   position: relative;
   font-size: 2rem;
+  gap: 1rem;
 }
 
 .fb {
@@ -222,6 +231,7 @@ section {
   height: auto;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 }
 .exp-content {
   width: 55%;
@@ -237,20 +247,14 @@ section {
 }
 
 .about-img {
-  width: 50%;
+  width: 100%;
   img {
     width: 100%;
     border-radius: 1rem;
   }
 }
 
-.about-info {
-  p {
-    font-size: 1.5rem;
-    text-align: justify;
-  }
-
-  button {
+.about-info button {
     padding: 0.75rem;
     border-radius: 2rem;
     margin-top: 2rem;
@@ -258,7 +262,7 @@ section {
     color: #fff;
     border: none;
   }
-}
+
 
 .prog-exp {
   display: flex;
@@ -274,13 +278,10 @@ section {
     font-size: 3rem;
     font-weight: 700;
   }
-  p {
-    font-size: 1.5rem;
-  }
 }
 
 .exp-img {
-  width: 35%;
+  width: 40%;
   img {
     width: 100%;
     border-radius: 1rem;
@@ -299,12 +300,8 @@ section {
   gap: 2rem;
 }
 
-.service-head {
+.service-head, .service-about {
   width: 50%;
-}
-.service-about {
-  width: 50%;
-  font-size: 1.5rem;
 }
 
 .services {
@@ -320,9 +317,6 @@ section {
   border-radius: 1rem;
   padding: 2rem 1rem;
   line-height: 1.5;
-  p {
-    font-size: 1.2rem;
-  }
 }
 .service:hover {
   background-color: blue;
@@ -338,16 +332,17 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: end;
+  gap: 2rem;
 }
 
+.achiv-detail {
+  width: 50%;
+}
 .achiv-activity {
   margin-block: 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-}
-.achiv-detail {
-  width: 50%;
 }
 .achiv-dbtn {
   background-color: blue;
@@ -362,12 +357,14 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+.hist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .activity-about {
-  width: 50%;
-  p {
-    font-size: 1.5rem;
-  }
+  width: 60%;
 }
 
 .work-cont {
@@ -382,18 +379,17 @@ section {
   gap: 5rem;
   margin-block: 2rem;
 }
-.work-head {
+.work-head, .work-about {
   width: 50%;
 }
-.work-about {
-  width: 50%;
-  font-size: 1.4rem;
-}
+
 .client-reviews {
   display: flex;
   justify-content: space-between;
   margin-block: 3rem;
+  gap: 2rem;
 }
+
 .work-outer {
   width: 30%;
   border-radius: 2rem;
@@ -401,33 +397,28 @@ section {
   color: #fff;
   padding: 3rem;
 }
+
 .work-row2 {
   display: flex;
   flex-direction: column;
   line-height: 2;
 }
+
 .client-profile {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
-.client-count {
-  span {
+
+.client-count span {
     font-size: 2rem;
   }
-  p {
-    font-size: 1.2rem;
-  }
-}
-.client-review {
-  span {
+
+.client-review span {
     font-size: 4rem;
     font-weight: 900;
   }
-  p {
-    font-size: 1.5rem;
-  }
-}
+
 .work-rating {
   width: 60%;
   background-color: #efefefc9;
@@ -441,7 +432,8 @@ section {
   line-height: 1.8;
 
   p {
-    font-size: 1.5rem;
+    font-family: "italic";
+    text-align: justify;
   }
 }
 
@@ -467,13 +459,10 @@ section {
   align-items: end;
   gap: 2rem;
 }
-.staff-intro {
+.staff-intro, .intro {
   width: 50%;
 }
-.intro {
-  width: 50%;
-  font-size: 1.5rem;
-}
+
 .members {
   width: 100%;
   display: flex;
@@ -518,9 +507,7 @@ section {
     border-left: 2px solid blue;
     padding-inline: 2rem;    
 }
-.box2 p {
-    font-size: 1.3rem;
-}
+
 .contact-details {
   display: grid;
   grid-template-columns: auto auto;
@@ -539,15 +526,16 @@ section {
     background-color: blue;
     color: #fff;
     border-radius: 2rem;
-    padding: 2rem 4rem;
 
+}
+.form {
+  padding: 2rem;
 }
 .form-type {
     line-height: 2;
-    margin-block: 2rem;
+    margin-bottom: 3rem;
 }
-form {
-    width: 100%;
+.user-detail {
     line-height: 2;
 
     input {
