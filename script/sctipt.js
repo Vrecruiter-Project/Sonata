@@ -1,28 +1,3 @@
-let currentIndex = 0;
-const slides = document.querySelector('.slides');
-const totalSlides = document.querySelectorAll('.slide').length;
- 
-function showSlide(index) {
-    if (index >= totalSlides) currentIndex = 0;
-    else if (index < 0) currentIndex = totalSlides - 1;
-    else currentIndex = index;
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-document.querySelector('.prev').addEventListener('click', () => {
-    showSlide(currentIndex - 1);
-});
-
-document.querySelector('.next').addEventListener('click', () => {
-    showSlide(currentIndex + 1);
-});
-
-// Auto slide every 5 seconds
-setInterval(() => {
-    showSlide(currentIndex + 1);
-}, 5000);
-
-
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -32,3 +7,20 @@ document.querySelectorAll('.nav-link').forEach(link => {
         document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+
+let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000);
+}
