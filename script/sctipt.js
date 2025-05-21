@@ -46,30 +46,68 @@ function slider() {
 
 slider();
 
-
-/** 
+/**
  * @description This is my Form
- * @return Input data 
-*/
+ * @return Input data
+ */
 
-function submitForm (){
-  document.getElementById('form').addEventListener('submit', function(e) {
+function submitForm() {
+  document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
-    
+
     const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
-            
-    const DataSaved = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message || 'No message provided'}`;
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
+
+    const DataSaved = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${
+      message || "No message provided"
+    }`;
     const alertMessage = `Form Submitted!\nThank You Join Us`;
-      
+
     console.log(DataSaved);
     alert(alertMessage);
-        
+
     this.reset();
-    });
+  });
 }
 
-submitForm()
+submitForm();
+
+/**
+ * @description Team members slider
+ */
+
+function teamSlide() {
+  const slider = document.querySelector(".members");
+  const slides = document.querySelectorAll(".member");
+  const totalSlides = slides.length; // 7
+  let currentIndex = 0;
+
+  for (let i = 0; i < 3; i++) {
+    const clone = slides[i].cloneNode(true);
+    slider.appendChild(clone);
+  }
+
+  function updateSlider() {
+    const offset = currentIndex * (100 / 3);
+    slider.style.transform = `translateX(-${offset}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    if (currentIndex > totalSlides - 3) {
+      currentIndex = 0; 
+      slider.style.transition = 'none'; 
+      
+      updateSlider();
+
+      slider.offsetHeight;
+      slider.style.transition = 'transform 0.3s ease-in-out';
+    }
+    updateSlider();
+  } 
+  setInterval(nextSlide, 3000);
+}
+teamSlide();
